@@ -1,0 +1,40 @@
+{
+  "userToInsertDB": [
+    {
+      "name": "Frank",
+      "userName": "Frank",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "name": "Rita",
+      "userName": "Rita",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "name": "Lucy",
+      "userName": "Lucy",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "name": "Dustin",
+      "userName": "Dustin",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "name": "Lily",
+      "userName": "Lily",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "name": "Peter",
+      "userName": "Peter",
+      "password": "123456",
+      "role": "user"
+    }
+  ]
+}

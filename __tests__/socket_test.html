@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>socket test</title>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- To test user notification, you can add the following code in app.js -->
+  <!-- 
+    app.use('/test', (req, res, next) => {
+    res.sendFile(path.join(__dirname, "__tests__/socket_test.html"));
+    }) 
+  -->
+  <input  id="userId" />
+  <button onclick="javascript:sendMsg()">Send</button>
+</body>
+</html>
+<script>
+  const socket = io();
+  socket.on("connect", () => {
+    console.log("socket.id", socket.id);
+  });
+
+  socket.on("message", (message) => {
+    console.log("message", message);
+  });
+
+  socket.on("user.login", (data) => {
+    console.log("message", data);
+  });
+
+  function sendMsg() {
+    var value = document.getElementById("userId").value;
+    console.log("sendMsg", value);
+    socket.emit("login", value)
+  }
+</script>
