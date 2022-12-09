@@ -3,7 +3,7 @@
 This repository contains codebase for nodeJS training assignment.
 
 ### USER
-Add 2 project managers and 5 employees in the database. I don't add code to hash user password stored in database. You can find username and password in users collection in database to sign in. And you also can find all the inserted user in [`./__tests__/user.json`](./__tests__/user.json)
+Add 2 project managers, 5 employees and 1 opening position in the database. I don't add code to hash user password stored in database. You can find username and password in users collection in database to sign in. And you also can find all the inserted user in [`./__tests__/user.json`](./__tests__/user.json)
 
 ## APIs implemented in this project
 - To test login API you can use postman to post the request to http://localhost:4000/api/user/login and pass `userName` and `password` parameters in request body
@@ -14,17 +14,17 @@ To test the following API you need to firstly logged in and get a token in the l
 
 - api/position/getPositionById: check the details of an opening. The position id parameter `id` should be passed in request body
 
-- api/position/apply: apply for the opening
+- api/position/apply: apply for the opening. The position id parameter `id` should be passed in request body
 
 - api/position: add an opening
 
 - api/position/:id: delete an opening
 
-- api/position/update: update an opening
+- api/position/update: update an opening.
 
 - api/position/getAllApplicantIds: return the applicant information, return a list of userIds for the userIds which have applied
 
-- api/getAll: get a list of all users
+- api/user/getAll: get a list of all users
 
 - api/user: add a user
 

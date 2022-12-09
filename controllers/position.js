@@ -23,7 +23,7 @@ const addPosition = async (req, res) => {
 };
 
 const getAllSummaries = async (req, res) => {
-	const result = await Position.find({ status: true }, '_id projectName technologies role')
+	const result = await Position.find({ status: true }, '-_id projectName technologies role')
 	res.status(200);
 	res.json({
 		message: strings.success,

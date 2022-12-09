@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const morgan = require('morgan')
 const dotenv = require('dotenv');
-const errorHandler = require('./util/errorHandler');
+const errorHandler = require('./middleware/errorHandler');
 const positionRoutes = require('./routes/position');
 const userRoutes = require('./routes/user');
 
